@@ -54,7 +54,7 @@ public class Cuenta {
 	//Métodos para llenar el arraylist de gastos
 	//Depuramos los datos solicitados llamando a la clase "Depurar"
 	public void llenarGastos() {
-		double gasto = Depurar.solicitarNumerodouble(scanner, usuario+" Introduce el gasto: ");
+		double gasto = Depurar.solicitarNumerodouble(scanner, usuario.getNombre()+" Introduce el gasto: ");
 		String descripcion = Depurar.solicitarTexto(scanner, "Introduce la descripcion: ");
 		Gasto nuevoGasto = new Gasto(gasto, descripcion);
 		if (gasto > saldo) {
@@ -70,7 +70,7 @@ public class Cuenta {
 	//Métodos para llenar el arraylist de ingresos
 	//Depuramos los datos solicitados llamando a la clase "Depurar"
 	public void llenarIngresos() {
-		double ingreso = Depurar.solicitarNumerodouble(scanner, usuario+" Introduce el ingreso: ");
+		double ingreso = Depurar.solicitarNumerodouble(scanner, usuario.getNombre()+" Introduce el ingreso: ");
 		String descripcion = Depurar.solicitarTexto(scanner, "Introduce la descripcion: ");
 		Ingreso nuevoIngreso = new Ingreso(ingreso, descripcion);
 		ingresos.add(nuevoIngreso);
